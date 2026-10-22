@@ -47,6 +47,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Performance cops (a maintained alternative to fasterer) [https://github.com/rubocop/rubocop-performance]
+  gem "rubocop-performance", require: false
 end
 
 gem "jwt_sessions", "~> 3.3"
