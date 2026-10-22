@@ -3,7 +3,7 @@ module Api
     class SessionsController < ApplicationController
       before_action :authorize_access_request!, only: :destroy
       before_action :authorize_by_refresh_header!, only: :refresh
-      
+
       rate_limit to: 10, within: 3.minutes, only: :create, with: -> { render_rate_limited }
       rate_limit to: 30, within: 10.minutes, only: :refresh, with: -> { render_rate_limited }
 
