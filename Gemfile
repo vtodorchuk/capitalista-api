@@ -50,5 +50,6 @@ group :development, :test do
 end
 
 gem "jwt_sessions", "~> 3.3"
+gem "argon2", "~> 2.3"
 
 gem "redis-client", "~> 0.31.0"
