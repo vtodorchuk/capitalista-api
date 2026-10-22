@@ -75,6 +75,10 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    alba (4.0.1)
+    argon2 (2.3.3)
+      ffi (~> 1.15)
+      ffi-compiler (~> 1.0)
     ast (2.4.3)
     base64 (0.3.0)
     bcrypt_pbkdf (1.1.2)
@@ -111,6 +115,9 @@ GEM
     ffi (1.17.4-x86_64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
     ffi (1.17.4-x86_64-linux-musl)
+    ffi-compiler (1.4.2)
+      ffi (>= 1.15.5)
+      rake
     fugit (1.14.0)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
@@ -128,6 +135,10 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (3.1.0)
+    jwt (2.10.3)
+      base64
+    jwt_sessions (3.3.0)
+      jwt (>= 2.9, < 3)
     kamal (2.12.0)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -259,6 +270,8 @@ GEM
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
       tsort
+    redis-client (0.31.0)
+      connection_pool
     regexp_parser (2.13.1)
     reline (0.7.0)
       io-console (~> 0.5)
@@ -352,15 +365,20 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  alba (~> 4.0)
+  argon2 (~> 2.3)
   bootsnap
   brakeman
   bundler-audit
   debug
   image_processing (~> 1.2)
+  jwt_sessions (~> 3.3)
   kamal
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 8.1.4)
+  redis-client (~> 0.31.0)
+  rubocop-performance
   rubocop-rails-omakase
   solid_cable
   solid_cache
