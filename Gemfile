@@ -48,3 +48,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
+
+gem "jwt_sessions", "~> 3.3"
+
+gem "redis-client", "~> 0.31.0"

@@ -128,6 +128,10 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (3.1.0)
+    jwt (2.10.3)
+      base64
+    jwt_sessions (3.3.0)
+      jwt (>= 2.9, < 3)
     kamal (2.12.0)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -259,6 +263,8 @@ GEM
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
       tsort
+    redis-client (0.31.0)
+      connection_pool
     regexp_parser (2.13.1)
     reline (0.7.0)
       io-console (~> 0.5)
@@ -357,10 +363,12 @@ DEPENDENCIES
   bundler-audit
   debug
   image_processing (~> 1.2)
+  jwt_sessions (~> 3.3)
   kamal
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 8.1.4)
+  redis-client (~> 0.31.0)
   rubocop-rails-omakase
   solid_cable
   solid_cache
