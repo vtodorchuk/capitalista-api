@@ -52,7 +52,7 @@ group :development, :test do
   gem "rubocop-performance", require: false
 end
 
-gem "jwt_sessions", "~> 3.3"
+gem "jwt_sessions", "~> 3.4"
 gem "argon2", "~> 2.3"
 
 gem "redis-client", "~> 0.31.0"
